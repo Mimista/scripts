@@ -1,10 +1,11 @@
 #!/bin/bash
 #Week days
+#Määritetään maanantai päivä joka on 6pv ennen nykyistä päivämäärää. Skripti ajetaan aina sunnuntaisin, jolloin nykyinen päivä=sunnuntai. näin saadaan koko viikon käyttäjät
 MON=$(date --date="6 days ago" +'%Y-%m-%d')
 SUN=$(date +'%Y-%m-%d')
 
-#ajetaan aina sunnuntaina, joten voidaan käyttää date komentoa sunnuntain pvm saamiseen ja laittaa maanantai 6 päivää sitten, jolloin saadaan oikea pvm
+
 
 #get logged in users from MON-SUN
-#last -f /var/log/wtmp | sed s/yyyymmdd/`date --date="6 days ago" +%Y%m%d`/  > login.txt
+#Ottaa /var/log/wtmp hakemistosta käyttäjät mon-sun ajalta ja lisää kirjautuneet login.txt tiedostoon.
 sed -n '/^$MON/,/^$SUN/p' /var/log/wtmp | last > login.txt
