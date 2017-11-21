@@ -1,1 +1,7 @@
-Skriptit videowall palvelimen ylläpitoon sekä tarkkailuun, että mitään outoja palveluita ei ala pyörimään ja seuranta kaikista kirjautuneista käyttäjistä
+Kesäprojektiin skriptejen suunnittelua.
+
+Viikottaiset skriptit videowall palvelimen ylläpitoon sekä tarkkailuun. Seurataan käynnissä olevia palveluja ja sisäänkirjautuneiden käyttäjien tietoja. Skriptejä pitää erikseen vielä ajastaa esim. cronilla. 
+
+- compare.sh, vertaa onko muutoksia tullut pyöriviin palvelujen, ajastiminen tietyin intervallein mahd.usein
+- loginhistory.sh sisäänkirjautuneet käyttäjät viikon ajalta, ajetaan sunnuntaisin klo 23.59
+- sendmail.sh lähettää tulokset tekstitiedostojen muodossa sähköpostilla adminin tarkkailtavaksi
