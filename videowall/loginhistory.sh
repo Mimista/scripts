@@ -9,3 +9,7 @@ SUN=$(date +'%Y-%m-%d')
 #get logged in users from MON-SUN
 #Ottaa /var/log/wtmp hakemistosta käyttäjät mon-sun ajalta ja lisää kirjautuneet login.txt tiedostoon.
 sed -n '/^$MON/,/^$SUN/p' /var/log/wtmp | last > login.txt
+
+
+
+#Huom! cronilla pitää vielä erikseen ajastaa erikseen tämä skripti ajettavaksi joka sunnuntai klo 23.59.
