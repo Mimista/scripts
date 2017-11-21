@@ -1,2 +1,2 @@
 # scripts
-scripts done as exercise
+Harjoituksena tehtyjä skriptejä
